@@ -4,7 +4,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "build": "npm install --prefix Frontend && npm run build --prefix Frontend && echo 'Frontend build completed'",
+    "build": "node build.js",
     "start": "node index.js"
   },
   "dependencies": {
