@@ -33,10 +33,16 @@ app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../../Frontend/dist")));
+  const frontendPath = path.join(__dirname, "../Frontend/dist");
+  console.log("Frontend path:", frontendPath);
+  console.log("Current directory:", __dirname);
+  
+  app.use(express.static(frontendPath));
 
   app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../../Frontend", "dist", "index.html"));
+    const indexPath = path.join(frontendPath, "index.html");
+    console.log("Serving index.html from:", indexPath);
+    res.sendFile(indexPath);
   });
 }
 
