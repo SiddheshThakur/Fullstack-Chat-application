@@ -6,7 +6,8 @@
   "scripts": {
     "build": "node build.js",
     "start": "node start.js",
-    "postinstall": "node build.js"
+    "postinstall": "node build.js",
+    "test-pdf": "node test-pdf-generation.js"
   },
   "dependencies": {
     "bcryptjs": "^3.0.2",
@@ -17,7 +18,9 @@
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.15.0",
-    "socket.io": "^4.8.1"
+    "socket.io": "^4.8.1",
+    "jspdf": "^2.5.1",
+    "pdf-lib": "^1.17.1"
   },
   "keywords": [],
   "author": "",
