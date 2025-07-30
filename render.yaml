@@ -15,4 +15,5 @@ services:
         - Backend/**
         - package.json
         - build.js
-        - build.sh 
+        - build.sh
+    secure: process.env.NODE_ENV !== "development" 
